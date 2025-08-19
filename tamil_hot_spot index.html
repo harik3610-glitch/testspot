@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="ta">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>தமிழ் ஹாட் ஸ்பாட் - Tamil Hot Spot</title>
+    <meta name="description" content="தமிழ் சினிமா செய்திகள், வைரல் வீடியோக்கள், மற்றும் பொழுதுபோக்கு - Tamil cinema news, viral videos, and entertainment">
+    
+    <!-- Tamil and English Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Noto+Sans+Tamil:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <style>
+        :root {
+            --tamil-primary: #FF6B35;
+            --tamil-secondary: #F7931E;
+            --tamil-accent: #E63946;
+            --tamil-green: #52B788;
+            --tamil-dark: #264653;
+        }
+        
+        .font-tamil {
+            font-family: 'Noto Sans Tamil', sans-serif;
+        }
+        
+        .font-inter {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .gradient-primary {
+            background: linear-gradient(135deg, var(--tamil-primary), var(--tamil-secondary));
+        }
+        
+        .card-hover {
+            transition: all 0.3s ease-in-out;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        
+        .youtube-embed {
+            aspect-ratio: 16/9;
+            width: 100%;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .animate-fade-in {
+            animation: fadeIn 0.6s ease-out;
+        }
+        
+        .tamil-heading {
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 font-inter">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <h1 class="text-2xl font-bold gradient-primary bg-clip-text text-transparent font-tamil">
+                        தமிழ் ஹாட் ஸ்பாட்
+                    </h1>
+                </div>
+                
+                <div class="hidden md:flex items-center space-x-6">
+                    <a href="#home" class="text-gray-700 hover:text-orange-500 font-tamil font-medium">முகப்பு</a>
+                    <a href="#cinema" class="text-gray-700 hover:text-orange-500 font-tamil font-medium">சினிமா</a>
+                    <a href="#viral" class="text-gray-700 hover:text-orange-500 font-tamil font-medium">வைரல் வீடியோ</a>
+                    <a href="#tamilnadu" class="text-gray-700 hover:text-orange-500 font-tamil font-medium">தமிழ்நாடு</a>
+                    <a href="#gossip" class="text-gray-700 hover:text-orange-500 font-tamil font-medium">கிசு கிசு</a>
+                </div>
+                
+                <div class="flex items-center">
+                    <input type="search" placeholder="தேடுங்கள்..." 
+                           class="px-4 py-2 border border-gray-300 rounded-full focus:outline-none focus:border-orange-500 font-tamil">
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="gradient-primary text-white py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-5xl md:text-7xl font-bold mb-6 font-tamil tamil-heading animate-fade-in">
+                தமிழ் ஹாட் ஸ்பாட்
+            </h2>
+            <p class="text-xl md:text-2xl mb-8 font-tamil animate-fade-in" style="animation-delay: 0.2s;">
+                தமிழ் சினிமா • வைரல் வீடியோக்கள் • பொழுதுபோக்கு செய்திகள்
+            </p>
+            <p class="text-lg md:text-xl opacity-90 font-inter animate-fade-in" style="animation-delay: 0.4s;">
+                Tamil Cinema • Viral Videos • Entertainment News
+            </p>
+        </div>
+    </section>
+
+    <!-- Category Filter -->
+    <section class="py-8 bg-white shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-wrap justify-center gap-4">
+                <button class="px-6 py-3 bg-red-500 text-white rounded-full font-tamil font-medium hover:bg-red-600 transition-colors">
+                    சினிமா
+                </button>
+                <button class="px-6 py-3 bg-orange-500 text-white rounded-full font-tamil font-medium hover:bg-orange-600 transition-colors">
+                    வைரல் வீடியோ
+                </button>
+                <button class="px-6 py-3 bg-green-500 text-white rounded-full font-tamil font-medium hover:bg-green-600 transition-colors">
+                    தமிழ்நாடு
+                </button>
+                <button class="px-6 py-3 bg-purple-500 text-white rounded-full font-tamil font-medium hover:bg-purple-600 transition-colors">
+                    கிசு கிசு
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Article -->
+    <section class="py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-white rounded-2xl shadow-xl overflow-hidden card-hover">
+                <div class="md:flex">
+                    <div class="md:w-1/2">
+                        <iframe class="youtube-embed" 
+                                src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+                                title="Featured Video" 
+                                frameborder="0" 
+                                allowfullscreen>
+                        </iframe>
+                    </div>
+                    <div class="md:w-1/2 p-8">
+                        <span class="inline-block px-3 py-1 bg-red-100 text-red-800 text-sm font-medium rounded-full mb-4 font-tamil">
+                            சினிமா
+                        </span>
+                        <h3 class="text-3xl font-bold text-gray-900 mb-4 font-tamil">
+                            தளபதி விஜய் 69வது படத்தின் முதல் லுக் வெளியானது
+                        </h3>
+                        <p class="text-gray-600 mb-6 font-tamil leading-relaxed">
+                            தளபதி விஜய் நடிக்கும் 69வது படத்தின் முதல் லுக் போஸ்டர் வெளியாகி ரசிகர்களிடம் பெரும் வரவேற்பை பெற்றுள்ளது. இந்த படத்தை எச். வினோத் இயக்குகிறார்.
+                        </p>
+                        <div class="flex items-center text-sm text-gray-500 font-tamil">
+                            <span>👁️ 45,230 பார்வைகள்</span>
+                            <span class="mx-2">•</span>
+                            <span>❤️ 1,234 விருப்பங்கள்</span>
+                            <span class="mx-2">•</span>
+                            <span>💬 567 கருத்துகள்</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Articles Grid -->
+    <section class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center mb-12 font-tamil text-gray-900">
+                சமீபத்திய செய்திகள்
+            </h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Article Card 1 -->
+                <article class="bg-white rounded-xl shadow-lg overflow-hidden card-hover">
+                    <div class="relative">
+                        <iframe class="youtube-embed" 
+                                src="https://www.youtube.com/embed/ScMzIvxBSi4" 
+                                title="Viral Dance Video" 
+                                frameborder="0" 
+                                allowfullscreen>
+                        </iframe>
+                        <span class="absolute top-4 left-4 px-3 py-1 bg-orange-500 text-white text-sm font-medium rounded-full font-tamil">
+                            வைரல் வீடியோ
+                        </span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-3 font-tamil">
+                            குழந்தையின் அழகான நடனம் இணையத்தை கலக்கி வருகிறது
+                        </h3>
+                        <p class="text-gray-600 mb-4 font-tamil">
+                            ஒரு சிறுமியின் பாரம்பரிய நடன காணொளி சமூக வலைதளங்களில் வைரலாகி உள்ளது...
+                        </p>
+                        <div class="flex items-center justify-between text-sm text-gray-500 font-tamil">
+                            <span>👁️ 12,450 பார்வைகள்</span>
+                            <span>2 மணி நேரம் முன்பு</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Article Card 2 -->
+                <article class="bg-white rounded-xl shadow-lg overflow-hidden card-hover">
+                    <div class="relative">
+                        <img src="https://picsum.photos/400/250" alt="News Image" class="w-full h-48 object-cover">
+                        <span class="absolute top-4 left-4 px-3 py-1 bg-green-500 text-white text-sm font-medium rounded-full font-tamil">
+                            தமிழ்நாடு
+                        </span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-3 font-tamil">
+                            சென்னையில் புதிய மெட்ரோ ரயில் திட்டம் அறிவிப்பு
+                        </h3>
+                        <p class="text-gray-600 mb-4 font-tamil">
+                            தமிழ்நாடு அரசு சென்னையில் புதிய மெட்ரோ ரயில் திட்டத்தை அறிவித்துள்ளது...
+                        </p>
+                        <div class="flex items-center justify-between text-sm text-gray-500 font-tamil">
+                            <span>👁️ 8,920 பார்வைகள்</span>
+                            <span>4 மணி நேரம் முன்பு</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Article Card 3 -->
+                <article class="bg-white rounded-xl shadow-lg overflow-hidden card-hover">
+                    <div class="relative">
+                        <img src="https://picsum.photos/400/251" alt="Gossip Image" class="w-full h-48 object-cover">
+                        <span class="absolute top-4 left-4 px-3 py-1 bg-purple-500 text-white text-sm font-medium rounded-full font-tamil">
+                            கிசு கிசு
+                        </span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-3 font-tamil">
+                            பிரபல நடிகரின் ரகசிய திருமண வதந்தி
+                        </h3>
+                        <p class="text-gray-600 mb-4 font-tamil">
+                            கோலிவுட்டின் பிரபல நடிகர் ரகசியமாக திருமணம் செய்துகொண்டதாக வதந்திகள்...
+                        </p>
+                        <div class="flex items-center justify-between text-sm text-gray-500 font-tamil">
+                            <span>👁️ 25,680 பார்வைகள்</span>
+                            <span>6 மணி நேரம் முன்பு</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <!-- Load More Button -->
+            <div class="text-center mt-12">
+                <button class="px-8 py-3 bg-orange-500 text-white rounded-full font-tamil font-medium hover:bg-orange-600 transition-colors">
+                    மேலும் பார்க்க
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Section -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center mb-12 font-tamil text-gray-900">
+                வைரல் வீடியோக்கள்
+            </h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="card-hover">
+                    <iframe class="youtube-embed rounded-xl" 
+                            src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+                            title="Viral Video 1" 
+                            frameborder="0" 
+                            allowfullscreen>
+                    </iframe>
+                    <h3 class="text-lg font-semibold mt-4 font-tamil">வைரல் வீடியோ 1</h3>
+                </div>
+                
+                <div class="card-hover">
+                    <iframe class="youtube-embed rounded-xl" 
+                            src="https://www.youtube.com/embed/ScMzIvxBSi4" 
+                            title="Viral Video 2" 
+                            frameborder="0" 
+                            allowfullscreen>
+                    </iframe>
+                    <h3 class="text-lg font-semibold mt-4 font-tamil">வைரல் வீடியோ 2</h3>
+                </div>
+                
+                <div class="card-hover">
+                    <iframe class="youtube-embed rounded-xl" 
+                            src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+                            title="Viral Video 3" 
+                            frameborder="0" 
+                            allowfullscreen>
+                    </iframe>
+                    <h3 class="text-lg font-semibold mt-4 font-tamil">வைரல் வீடியோ 3</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-2xl font-bold mb-4 gradient-primary bg-clip-text text-transparent font-tamil">
+                        தமிழ் ஹாட் ஸ்பாட்
+                    </h3>
+                    <p class="text-gray-400 font-tamil">
+                        தமிழ் சினிமா மற்றும் பொழுதுபோக்கு செய்திகளுக்கான உங்கள் முதல் தேர்வு
+                    </p>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4 font-tamil">பிரிவுகள்</h4>
+                    <ul class="space-y-2 font-tamil">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">சினிமா</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">வைரல் வீடியோ</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">தமிழ்நாடு</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">கிசு கிசு</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4 font-tamil">தகவல்</h4>
+                    <ul class="space-y-2 font-tamil">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">எங்களைப் பற்றி</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">தொடர்பு</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">விளம்பரம்</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">வேலை வாய்ப்புகள்</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4 font-tamil">செய்திமடல்</h4>
+                    <p class="text-gray-400 mb-4 font-tamil">சமீபத்திய செய்திகளைப் பெறுங்கள்</p>
+                    <div class="flex">
+                        <input type="email" placeholder="உங்கள் மின்னஞ்சல்" 
+                               class="flex-1 px-4 py-2 bg-gray-800 border border-gray-700 rounded-l-md focus:outline-none focus:border-orange-500 font-tamil">
+                        <button class="px-4 py-2 bg-orange-500 text-white rounded-r-md hover:bg-orange-600 transition-colors font-tamil">
+                            சேர்க்க
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-8 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+                    <p class="text-gray-400 font-tamil">
+                        &copy; 2025 தமிழ் ஹாட் ஸ்பாட். அனைத்து உரிமைகளும் பாதுகாக்கப்பட்டுள்ளன.
+                    </p>
+                    <div class="flex space-x-4 text-sm">
+                        <a href="#" class="text-gray-400 hover:text-white font-tamil transition-colors">
+                            சேவை நிபந்தனைகள்
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white font-tamil transition-colors">
+                            தனியுரிமைக் கொள்கை
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript for interactivity -->
+    <script>
+        // Add smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Add search functionality
+        const searchInput = document.querySelector('input[type="search"]');
+        searchInput.addEventListener('input', function(e) {
+            // Add your search logic here
+            console.log('Searching for:', e.target.value);
+        });
+
+        // Add category filter functionality
+        const categoryButtons = document.querySelectorAll('button');
+        categoryButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                // Remove active class from all buttons
+                categoryButtons.forEach(btn => btn.classList.remove('ring-2', 'ring-white'));
+                // Add active class to clicked button
+                this.classList.add('ring-2', 'ring-white');
+            });
+        });
+
+        // Add animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-fade-in');
+                }
+            });
+        }, observerOptions);
+
+        // Observe all article cards
+        document.querySelectorAll('article').forEach(article => {
+            observer.observe(article);
+        });
+    </script>
+</body>
+</html>
